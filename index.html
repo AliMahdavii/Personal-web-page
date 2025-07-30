@@ -114,17 +114,25 @@
         </section>
 
     </div>
+
     <div class="sections-container">
-        <section class="about-me" id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-            <p>
-                I'm a passionate Frontend Developer with a love for clean design and interactive web experiences.<br>
-                I enjoy turning complex problems into simple, beautiful, and intuctive interfaces.
-            </p>
-            <img src="me/erik-mclean-8SeJUmfahu0-unsplash.jpg" alt="">
-            </div>
-        </section>
+
+      <section class="about-me" id="about">
+  <div class="about-bg"></div>
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>
+    Hey! I'm a curious mind with a passion for building clean, interactive, and modern web interfaces.  
+    Even though I'm just starting my journey in web development, I’ve already fallen in love with the process of turning lines of code into something people can actually use and enjoy.
+    <br><br>
+    This website is my very first real project — the place where learning meets doing. I'm constantly exploring HTML, CSS, and JavaScript to better understand how the web works, and each step feels like unlocking a new level.
+    <br><br>
+    I believe that great design isn’t just about looks — it’s about how it feels and functions. I’m excited to grow, collaborate, and one day build digital experiences that really matter.
+    <br><br>
+    When I’m not coding, you’ll probably find me exploring design trends, watching tutorials, or dreaming up my next idea.
+  </p>
+  </div>
+</section>
 
         <div class="rw">
         <section class="resume-section" id="resume">
@@ -149,19 +157,8 @@
                     <p>This web page is my first project.</p>
                 </div>
             </section>
-        </div>
-
-        <section class="contact-section" id="contact">
-            <h2>Contact Me</h2>
-            <form class="contact-form" action="">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your message" required></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
-        </section>
-        
-        </div>
+            </div>
+           </div>
         </div>
 
         <div>
@@ -172,30 +169,36 @@
                 <img src="my gallery/IMG_9954.jpg" class="gallery-item" alt="Photo 2">
                 <img src="my gallery/IMG_0790.jpg" class="gallery-item" alt="Photo 3">
                 <img src="my gallery/IMG_0931.jpg" class="gallery-item" alt="Photo 4">
-                <img src="my gallery/IMG_0974.jpg" class="gallery-item" alt="Photo 5">
+                <img src="my gallery/IMG_0974.jpg" class="gallery-item" alt="Photo 5" style="height: 750px;">
                 <img src="my gallery/IMG_1436.jpg" class="gallery-item" alt="Photo 6">
                 <img src="my gallery/IMG_1456.jpg" class="gallery-item" alt="Photo 7">
                 <img src="my gallery/IMG_1974_polarr.JPEG" class="gallery-item" alt="Photo 8">
                 <img src="my gallery2/IMG_3445.jpg" class="gallery-item" alt="Photo 9">
-                <img src="my gallery2/IMG_4279_polarr.JPEG" class="gallery-item" alt="Photo 10">
+                <img src="my gallery2/IMG_4279_polarr.JPEG" class="gallery-item" alt="Photo 10" style="height: 860px;">
                 <img src="my gallery2/IMG_9279.jpg" class="gallery-item" alt="Photo 11">
                 <img src="my gallery2/IMG_6353.jpg" class="gallery-item" alt="Photo 12">
                 <img src="my gallery2/IMG_7107.jpg" class="gallery-item" alt="Photo 13">
                 <img src="my gallery2/IMG_7984.jpg" class="gallery-item" alt="Photo 14">
-                <img src="my gallery2/IMG_9198_polarr.JPEG" class="gallery-item" alt="Photo 15">
+                <img src="my gallery2/IMG_9198_polarr.JPEG" class="gallery-item" alt="Photo 15" style="height: 740px;">
             </div>
         </section>
+
+        
         </div>
         <section class="closing-section scroll-fade">
             <blockquote>
                 "Design is not just what it looks like and feels like. Design is how it works."
                 <br><span>_ Steve Jobs</span>
             </blockquote>
+            <section class="contact-section scroll-fade" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, just send me an email.</p>
 
-            <div class="final-cta">
-                <h2>Ready to work together?</h2>
-                <a href="#contact" class="btn">Get in Touch</a>
-            </div>
+            <a href="mailto:84a.mahdaviniya@gmail.com?subject=Let's%20Work%20Together&body=Hi%20Ali,%20cheked%20out%20your%20portfolio%20and..." class="btn email-btn">
+              <img src="icons/Gmail_29991.png" alt="gmail icon">
+              Send Email
+            </a>
+        </section>
         </section>
 
         <footer class="scroll-fade">
@@ -328,8 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         animate();
-        observer.unobserve(bar); // فقط یه بار اجرا بشه
-      }
+        observer.unobserve(bar)};
     });
   }, {
     threshold: 0.5
