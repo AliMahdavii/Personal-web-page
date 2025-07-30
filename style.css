@@ -14,7 +14,7 @@ body{
 
 .sidebar{
     width: 380px;
-    height: 100%;
+    height: auto;
     background-color: #1c1c1c;
     padding: 30px;
     text-align: center;
@@ -72,8 +72,8 @@ body{
     background-color: rgba(28,28,28,0.9);
     z-index: 999;
     padding-top: 25px;
-    padding-right: 500px;
-    padding-left: 500px;
+    padding-right: 400px;
+    padding-left: 400px;
     padding-bottom: 15px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -112,12 +112,13 @@ body{
 .hero h3 {
     font-size: 16px;
     color: #ff66b2;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
     font-size: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 120px;
 }
 
 .sections-container {
@@ -129,43 +130,44 @@ body{
     padding: 20px;
 }
 
-.about-me{
-    margin-top: 50px;
-    background-color: #1c1c1c;
-    padding: 30px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    width: 100%;
-    height: auto;
+.about-me {
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 15px;
 }
 
-.about-me h2{
-    font-size: 24px;
+.about-me .about-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(me/erik-mclean-8SeJUmfahu0-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.6);
+  z-index: 1;
+}
+
+.about-me h2 {
     color: #ff66b2;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.about-me p {
-    font-size: 17px;
-}
-
-.about-me img {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.about-me .about-content{
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.about-me:hover .about-content{
-    max-height: 400px;
-    opacity: 1;
+.about-me .about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
 }
 
 html{
@@ -180,7 +182,6 @@ html{
     background-color: #1c1c1c;
     padding: 30px;
     border-radius: 15px;
-    max-width: 30%;
     color: #fff;
     transition: all 0.3s ease;
 }
@@ -213,75 +214,46 @@ html{
     line-height: 1.5;
 }
 
-.resume-section .resume-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.resume-section:hover .resume-content {
-    max-height: 400px;
-    opacity: 1;
-}
-
 .contact-section {
-    margin-top: 15px;
-    background-color: #1c1c1c;
-    padding: 30px;
-    border-radius: 15px;
-    min-width: 400px;
-    flex-shrink: 0;
-    color: #fff;
-    height: 50%;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .contact-section h2 {
     color: #ff66b2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 28px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.contact-section p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 25px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #2a2a2a;
-    color: #fff;
-    font-size: 14px;
-    resize: none;
-}
-
-.contact-form textarea {
-    min-height: 100px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    background-color: #333;
-}
-
-.contact-form .btn {
-    align-self: flex-start;
+.email-btn {
+    display: inline;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
     background-color: #ff66b2;
     color: white;
     border: none;
     border-radius: 12px;
-    padding: 10px 20px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease; 
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
-.contact-form .btn:hover {
-    background-color: #ff88c2;
+.email-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.email-btn:hover {
+    background-color: #ff85c2;
 }
 
 .works-section {
@@ -291,7 +263,7 @@ html{
     padding: 30px;
     border-radius: 15px;
     transition: all 0.3s ease;
-    width: 70%;
+    width: auto;
 }
 
 .works-section h2 {
@@ -304,18 +276,6 @@ html{
     font-size: 17px;
 }
 
-.works-section .works-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.works-section:hover .works-content {
-    max-height: 400px;
-    opacity: 1;
-}
-
 .rw {
     display: flex;
     flex-direction: row;
@@ -325,9 +285,10 @@ html{
     background-color: #1c1c1c;
     padding: 40px 20px;
     border-radius: 20px;
-    width: 100%;
-    height: 40%;
+    width: 90%;
+    height: auto;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .social-media h2 {
@@ -368,9 +329,9 @@ html{
     background-color: #1c1c1c;
     border-radius: 20px;
     margin-top: 30px;
-    max-width: 100%;
     text-align: center;
-    height: 40%;
+    height: auto;
+    width: 90%;
 }
 
 .stat {
@@ -507,7 +468,7 @@ html{
     background: linear-gradient(135deg, #1c1c1c, #0f0f0f);
     text-align: center;
     border-radius: 20px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .closing-section blockquote {
@@ -523,27 +484,6 @@ html{
     margin-top: 10px;
     font-size: 14px;
     color: #9999;
-}
-
-.final-cta h2 {
-    font-size: 26px;
-    color: #ff66b2;
-    margin-bottom: 20px;
-}
-
-.final-cta .btn {
-    padding: 12px 30px;
-    font-size: 16px;
-    background-color: #ff66b2;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.final-cta .btn:hover {
-    background-color: #ff85c2;
 }
 
 footer {
