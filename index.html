@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -20,6 +19,10 @@
                 <li><a href="#social">SOCIAL</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#gallery">MY GALLERY</a></li>
+                <div class="theme-switch">
+                  <input type="checkbox" id="toggle-theme">
+                  <label for="toggle-theme" class="switch"></label>
+                </div>
             </ul>
     </header>
 
@@ -32,6 +35,7 @@
         <p class="title">Frontend Developer</p>
         <p class="location">Tehran, Iran</p>
         <button class="btn">Let's work together</button>
+
 
         <section class="skills-section" id="skills">
             <h2>My Skills</h2>
@@ -355,6 +359,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.2 });
 
   scrollElements.forEach(el => fadeObserver.observe(el));
+    </script>
+
+    <script>
+  const toggleCheckbox = document.getElementById('toggle-theme');
+  const root = document.documentElement;
+
+  // Load theme from storage
+  const stored = localStorage.getItem("theme");
+  if (stored === "light") {
+    root.classList.add("light-theme");
+    toggleCheckbox.checked = true;
+  }
+
+  toggleCheckbox.addEventListener("change", () => {
+    if (toggleCheckbox.checked) {
+      root.classList.add("light-theme");
+      localStorage.setItem("theme", "light");
+    } else {
+      root.classList.remove("light-theme");
+      localStorage.setItem("theme", "dark");
+    }
+  });
     </script>
 
 </body>
