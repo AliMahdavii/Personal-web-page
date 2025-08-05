@@ -606,9 +606,3 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
-
-.sidebar,
-.main-content,
-.sections-container {
-    align-self: flex-start;
-}
