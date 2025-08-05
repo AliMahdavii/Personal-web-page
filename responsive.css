@@ -1,13 +1,37 @@
-@media (max-width:768px) {
-    body {
-        flex-direction: column;
-    }
+@media (max-width:576px) {
 
     .sidebar {
         width: 100%;
         margin: 0;
         border-radius: 0;
         padding: 20px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto;
+        white-space: nowrap;
+        gap: 20px;
+        justify-content: flex-start;
+        padding: 10px 15px;
+        background-color: var(--navbar-bg);
+        border-bottom: 1px solid var(--shadow);
+        scrollbar-width: none;
+    }
+
+    .navbar ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar ul li {
+        flex: 0 0 auto;
+    }
+
+    .theme-switch {
+        margin-left: auto;
+        flex-shrink: 0;
     }
 
     .main-content {
@@ -16,16 +40,21 @@
 
     .navbar ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         align-items: center;
     }
 
+    .theme-switch {
+        margin-top: 10px;
+    }
+
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
     }
 
     .hero h3 {
+        font-size: 18px;
         text-align: center;
     }
 
@@ -37,12 +66,14 @@
 
     .about-me,
     .resume-section,
+    .stats-section,
+    .gallery,
     .works-section,
     .contact-section,
     .skills-section,
     .social-media,
     .closing-section {
-        margin-top: 40px;
+        margin: 0;
         padding: 20px;
         width: 100%;
     }
@@ -52,20 +83,63 @@
         flex-wrap: wrap;
     }
 
-    .gallery {
-        grid-template-columns: 1fr 1fr;
+    .stats-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .gallery-grid {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 10px;
     }
 
-    .gallery img {
-        width: 100%;
+    .gallery-grid img {
         border-radius: 10px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     footer {
         text-align: center;
-        padding: 20px;
+        padding: 20px 0; 
+    }
+
+    .about-me p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .sidebar {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 30px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .gallery-grid {
+        column-count: 2;
+    }
+
+    .stats-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
     }
 }
