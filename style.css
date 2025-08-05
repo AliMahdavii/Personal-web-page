@@ -50,10 +50,9 @@ body{
     width: 380px;
     height: auto;
     background-color: var(--box-bg);
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     text-align: center;
     border-radius: 20px;
-    margin-top: 80px;
     margin-left: 15px;
 }
 
@@ -118,7 +117,6 @@ body{
     backdrop-filter: blur(12px);
     transition: all 0.3s ease;
     padding-bottom: 8px;
-    margin: 10px;
 }
 
 .navbar ul {
@@ -606,3 +604,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
