@@ -9,16 +9,17 @@
     }
 
     .navbar ul {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: auto;
-        white-space: nowrap;
-        gap: 20px;
-        justify-content: flex-start;
-        padding: 10px 15px;
-        background-color: var(--navbar-bg);
-        border-bottom: 1px solid var(--shadow);
-        scrollbar-width: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+        height: auto;
+        flex-wrap: wrap;
     }
 
     .navbar ul::-webkit-scrollbar {
@@ -110,36 +111,5 @@
     .about-me p {
         font-size: 15px;
         line-height: 1.6;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 991px) {
-
-    .sidebar {
-        width: 100%;
-        padding: 30px;
-        text-align: center;
-    }
-
-    .main-content {
-        padding: 30px;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .gallery-grid {
-        column-count: 2;
-    }
-
-    .stats-section {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
     }
 }
