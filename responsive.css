@@ -26,6 +26,10 @@
         display: none;
     }
 
+    .a {
+        flex-direction: column;
+    }
+
     .b {
         flex-direction: column;
     }
@@ -39,7 +43,6 @@
     }
 
     .navbar {
-        font-size: 1px;
         padding: 15px 10px;
         height: auto;
         flex-wrap: wrap;
