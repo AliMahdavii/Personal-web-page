@@ -31,7 +31,7 @@
     }
 
     .navbar ul {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
