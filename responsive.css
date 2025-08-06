@@ -39,6 +39,7 @@
     }
 
     .navbar {
+        font-size: 3px;
         padding: 15px 10px;
         height: auto;
         flex-wrap: wrap;
